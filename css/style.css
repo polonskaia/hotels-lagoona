@@ -87,7 +87,7 @@ ul {
 .btn:hover {
   color: var(--white);
   background-color: var(--deep-orange);
-  transform: scale(1.09);
+  transform: scale(1.05);
 }
 
 .section-heading {
@@ -431,7 +431,6 @@ ul {
   margin-right: 0;
 }
 
-
 .section-advantages-icon {
   margin-bottom: 10px;
 }
@@ -715,6 +714,7 @@ ul {
   font-size: 16px;
   line-height: 1.5;
   color: var(--deep-orange);
+  transition: color .3s ease-in;
 }
 
 .contacts-tel:hover,
@@ -775,6 +775,7 @@ ul {
 .footer-agreement {
   font-size: 16px;
   color: var(--deep-orange);
+  transition: color .3s ease-in;
 }
 
 .footer-agreement:hover {
@@ -798,6 +799,14 @@ ul {
 
 .footer-social-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.footer-social-icon {
+  transition: transform .3s ease-in;
+}
+
+.footer-social-icon:hover {
+  transform: scale(1.2);
 }
 
 .footer-social-icon:hover path {
