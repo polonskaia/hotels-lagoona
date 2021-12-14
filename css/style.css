@@ -155,6 +155,57 @@ ul {
   background-color: var(--white);
 }
 
+.burger {
+  position: relative;
+  display: none;
+  width: 30px;
+  height: 23px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  z-index: 50;
+}
+
+.burger-nav {
+  display: none;
+}
+
+.burger-nav.is-active {
+  transform: none;
+}
+
+.burger-line,
+.burger-line::before,
+.burger-line::after {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: var(--deep-orange);
+}
+
+.burger-line::before,
+.burger-line::after {
+  content: '';
+}
+
+.burger-line::before {
+  transform: translateY(9px);
+}
+
+.burger-line::after {
+  transform: translateY(18px);
+}
+
+.burger-active .burger-line::before {
+  height: 0;
+}
+
+.burger-active .burger-line {
+  transform: rotate(45deg);
+}
+
+.burger-active .burger-line::after {
+  transform: rotate(-45deg);
+}
+
 .nav {
   padding: 16px 55px 16px 45px;
   border-right: 1px solid #e1e1e1;
@@ -815,4 +866,219 @@ ul {
 
 .footer-social-icon path {
   transition: fill .5s ease;
+}
+
+@media (max-width: 375px) {
+  .container {
+    max-width: 310px;
+  }
+
+  .section-heading {
+    padding-left: 15px;
+    font-size: 30px;
+  }
+
+  .header-container {
+    margin-bottom: 35px;
+    padding-top: 10px;
+  }
+
+  .header-top {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .header-top-left {
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    margin-right: 18px;
+  }
+
+  .logo-img {
+    width: 165px;
+  }
+
+  .header-tel {
+    font-size: 15px;
+  }
+
+  .account-link {
+    font-size: 18px;
+  }
+
+  .header-bottom {
+    position: relative;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .header-btn {
+    justify-content: flex-end;
+    padding-right: 0;
+  }
+
+  .btn-tour {
+    margin-right: 10px;
+  }
+
+  .btn-call,
+  .btn-tour {
+    font-size: 13px;
+    padding: 15px 10px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .burger-nav {
+    padding: 63px 0 35px 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 310px;
+    border-radius: 15px;
+    background-color: var(--white);
+    transition: transform .5s ease;
+    transform: translateX(-111%);
+  }
+
+  .burger-nav-link {
+    font-size: 20px;
+  }
+
+  .burger-nav-link:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .specials-container,
+  .services-container,
+  .advantages-container {
+    margin-bottom: 40px;
+  }
+
+  .section-specials-heading {
+    font-size: 35px;
+  }
+
+  .section-specials-card {
+    padding: 40px 20px;
+  }
+
+  .section-specials-card-list {
+    width: 310px;
+    flex-direction: column;
+  }
+
+  .special2 {
+    margin-bottom: 23px;
+  }
+
+  .section-specials-card-item {
+    width: 310px;
+  }
+
+  .section-specials-heading.lux {
+    font-size: 45px;
+  }
+
+  .section-specials-price.lux {
+    font-size: 25px;
+  }
+
+  .about-container {
+    margin-bottom: 35px;
+  }
+
+  .section-services-item {
+    margin-right: 0;
+    padding: 100px 15px 50px 20px;
+  }
+
+  .section-services-item:not(:last-child) {
+    margin-bottom: 23px;
+  }
+
+  .section-services-item-heading {
+    font-size: 18px;
+  }
+
+  .section-heading.advantages,
+  .section-heading.placement {
+    margin-bottom: 20px;
+  }
+
+  .section-advantages-item {
+    margin-right: 0;
+    width: 310px;
+  }
+
+  .section-placement-item {
+    width: 310px;
+    padding-top: 233px;
+    padding-right: 70px;
+  }
+
+  .section-placement-item.card9 {
+    padding-top: 360px;
+    background-size: cover;
+  }
+
+  .section-placement-item:not(:last-child) {
+    margin-bottom: 23px;
+  }
+
+  .section-placement-heading {
+    padding-top: 10px;
+  }
+
+  .booking-container {
+    margin-bottom: 40px;
+    padding: 28px 35px 61px;
+  }
+
+  .section-booking-form {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-booking-item:not(:last-child) {
+    margin-bottom: 20px;
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .section-booking-input {
+    width: 169px;
+  }
+
+  .section-contacts-card {
+    width: 310px;
+    background-image: none;
+  }
+
+  .section-contacts-item {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    padding: 40px 30px;
+  }
+
+  .footer-contacts {
+    margin-right: 30px;
+  }
+
+  .footer-text {
+    display: none;
+  }
 }
